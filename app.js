@@ -4,8 +4,8 @@ import { renderIngredients } from './utils.js';
 const form = document.getElementById('add-ingredient');
 const ingredientList = document.getElementById('ingredient-list');
 
-const remove = document.getElementById('remove-ingredient');
-const save = document.getElementById('add-ingredient');
+const remove = document.getElementById('remove');
+const save = document.getElementById('submit');
 // let state
 let ingredientArr = [];
 
@@ -18,22 +18,29 @@ function renderIngredient() {
     }
 }
 
-function displayIngredient() {
+// function displayIngredient() {
 
-}
+// }
+
+// function resetIngredients() {
+//     ingredientArr = [];
+//     ingredientList.textContent = '';
+// }
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     
-    const foodData = new FormData(form);
-    const food = {
-        ingredient: foodData.get('ingredient'),
-        qty: foodData.get('qty'),
-        measurements: foodData.get('measurements')
+    const data = new FormData(form);
+    const item = {
+        ingredient: data.get('ingredients'),
+        qty: data.get('qty'),
+        measurements: data.get('measurement'),
     };
-    ingredientArr.push(food);
+    ingredientArr.push(item);
     renderIngredient();
     form.reset();
+    console.log('hi', item);
+
 });
   // get user input
   // use user input to update state 

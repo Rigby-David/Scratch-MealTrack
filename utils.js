@@ -1,5 +1,5 @@
-export function renderIngredients(food) {
+export function renderIngredients(item) {
     const li = document.createElement('li');
-    li.textContent = `${food.ingredient} ${food.qty} ${food.measurements}`;
+    li.textContent = `${item.qty} ${item.measurements} of ${item.ingredient}`;
     return li;
 }

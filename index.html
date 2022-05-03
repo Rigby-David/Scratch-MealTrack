@@ -18,7 +18,7 @@
     <main>
         <section>
             <h3>Let's cook!</h3>
-            <div class="">
+            <div class="Ingredients">
                 <form id="add-ingredient">
                     <label>
                         Add Ingredients:
@@ -26,20 +26,21 @@
                     </label>
                     <label>
                         Quantity:
-                        <input type="number" name="quantity" id="quantity" />
+                        <input type="number" name="qty" id="qty" />
                     </label>
                     <label>
-                        <select id="measurement-select">
-                            <option value="">Cups</option>
-                            <option value="">Tablespoons</option>
-                            <option value="">Teaspoons</option>
+                        Measurement:
+                        <select name="measurement" id="measurement">
+                            <option value="cups">Cups</option>
+                            <option value="tbsp">Tablespoons</option>
+                            <option value="tsp">Teaspoons</option>
                         </select>
                     </label>
-                    <button id="add-ingredient">Add Ingredients</button>
+                    <button id="submit">Add Ingredient</button>
                 </form>
                 <div class="ingredient-list">
                     <ul id="ingredient-list"></ul>
-                    <button id="remove-ingredient">Remove Ingredient</button>
+                    <button id="remove">Remove Ingredient</button>
                 </div>
             </div>
         </section>
