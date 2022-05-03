@@ -42,6 +42,11 @@ form.addEventListener('submit', (e) => {
     console.log('hi', item);
 
 });
+
+remove.addEventListener('click', () => {
+    ingredientArr.pop();
+    renderIngredient();
+});
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
